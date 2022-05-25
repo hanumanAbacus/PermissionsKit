@@ -79,7 +79,7 @@ public class PermissionDrawIconView: UIView {
             DrawService.drawBluetooth(frame: rect, resizing: .aspectFit, color: tintColor)
         case .tracking:
             DrawService.drawTracking(frame: rect, resizing: .aspectFit, color: tintColor)
-        case .faceID, .siri, .health:
+        case .faceID, .siri, .health, .appUpdate:
             // Not implemented old style icons.
             break
         case .none:

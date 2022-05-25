@@ -59,6 +59,8 @@ enum Texts {
             return NSLocalizedString("permission siri name", bundle: bundle, comment: "")
         case .health:
             return NSLocalizedString("permission health name", bundle: bundle, comment: "")
+        case .appUpdate:
+            return NSLocalizedString("permission appupdate name", bundle: bundle, comment: "")
         }
     }
     
@@ -98,6 +100,8 @@ enum Texts {
             return NSLocalizedString("permission siri description", bundle: bundle, comment: "")
         case .health:
             return NSLocalizedString("permission health description", bundle: bundle, comment: "")
+        case .appUpdate:
+            return NSLocalizedString("permission appupdate description", bundle: bundle, comment: "")
         }
     }
     

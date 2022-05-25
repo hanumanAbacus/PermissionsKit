@@ -59,6 +59,8 @@ enum Images {
             return UIImage.init(named: "Siri", in: bundle, compatibleWith: nil) ?? UIImage()
         case .health:
             return UIImage.init(named: "Health", in: bundle, compatibleWith: nil) ?? UIImage()
+        case .appUpdate:
+            return app_icon_mask
         }
     }
     
