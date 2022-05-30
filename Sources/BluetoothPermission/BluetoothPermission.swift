@@ -43,7 +43,7 @@ public class BluetoothPermission: Permission {
     public override var status: Permission.Status {
         if #available(iOS 13.1, tvOS 13.1, *) {
             switch CBCentralManager.authorization {
-            case .allowedAlways: return .authorized
+            case .allowedAlways: return (BluetoothHandler.shared.isEnabled ? .authorized : .denied)
             case .notDetermined: return .notDetermined
             case .restricted: return .denied
             case .denied: return .denied
@@ -51,7 +51,7 @@ public class BluetoothPermission: Permission {
             }
         } else if #available(iOS 13.0, tvOS 13.0, *) {
             switch CBCentralManager().authorization {
-            case .allowedAlways: return .authorized
+            case .allowedAlways: return (BluetoothHandler.shared.isEnabled ? .authorized : .denied)
             case .notDetermined: return .notDetermined
             case .restricted: return .denied
             case .denied: return .denied
@@ -59,7 +59,7 @@ public class BluetoothPermission: Permission {
             }
         } else {
             switch CBPeripheralManager.authorizationStatus() {
-            case .authorized: return .authorized
+            case .authorized: return (BluetoothHandler.shared.isEnabled ? .authorized : .denied)
             case .denied: return .denied
             case .restricted: return .denied
             case .notDetermined: return .notDetermined

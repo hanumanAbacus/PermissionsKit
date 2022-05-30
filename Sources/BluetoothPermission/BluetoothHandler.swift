@@ -26,6 +26,7 @@ import CoreBluetooth
 class BluetoothHandler: NSObject, CBCentralManagerDelegate {
     
     var completion: ()->Void = {}
+    var isEnabled: Bool = true
     
     // MARK: - Init
     
@@ -55,6 +56,8 @@ class BluetoothHandler: NSObject, CBCentralManagerDelegate {
             default:
                 self.completion()
             }
+                
+            isEnabled = (central.state == .poweredOn)
         } else {
             switch CBPeripheralManager.authorizationStatus() {
             case .notDetermined:
