@@ -171,4 +171,12 @@ Pod::Spec.new do |s|
         "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSIONSKIT_HEALTH PERMISSIONSKIT_COCOAPODS"
     }
   end
+  
+  s.subspec 'LocalNetworkPermission' do |subspec|
+    subspec.dependency 'PermissionsKit/Core'
+    subspec.source_files = "Sources/LocalNetworkPermission/**/*.swift"
+    subspec.pod_target_xcconfig = {
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS"  => "PERMISSIONSKIT_LOCALNETWORK PERMISSIONSKIT_COCOAPODS"
+    }
+  end
 end

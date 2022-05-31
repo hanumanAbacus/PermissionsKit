@@ -239,6 +239,14 @@ let package = Package(
                 .define("PERMISSIONSKIT_SPM")
             ]
         ),
+        .target(
+            name: "LocalNetworkPermission",
+            dependencies: [.target(name: "PermissionsKit")],
+            swiftSettings: [
+                .define("PERMISSIONSKIT_LOCALNETWORK"),
+                .define("PERMISSIONSKIT_SPM")
+            ]
+        ),
     ],
     swiftLanguageVersions: [.v5]
 )

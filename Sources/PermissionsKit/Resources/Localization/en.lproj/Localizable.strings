@@ -78,6 +78,10 @@
 
 "permission health description" = "Allow to access health data";
 
+"permission local network name" = "Local Network";
+
+"permission local network description" = "Allow to access Local Network";
+
 "denied alert title" = "Permission denied";
 
 "denied alert description" = "Please, go to Settings and allow permission.";
