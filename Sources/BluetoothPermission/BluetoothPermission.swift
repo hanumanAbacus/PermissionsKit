@@ -68,6 +68,10 @@ public class BluetoothPermission: Permission {
         }
     }
     
+    public override init() {
+        BluetoothHandler.shared.reqeustUpdate()
+    }
+    
     public override func request(completion: @escaping () -> Void) {
         BluetoothHandler.shared.completion = completion
         BluetoothHandler.shared.reqeustUpdate()
