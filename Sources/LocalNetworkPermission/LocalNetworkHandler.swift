@@ -30,7 +30,7 @@ class LocalNetworkHandler: NSObject, NetServiceDelegate {
     
     // MARK: - Init
     
-    static let shared: LocalNetworkPermission = .init()
+    static let shared: LocalNetworkHandler = .init()
     
     override init() {
         super.init()
